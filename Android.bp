@@ -11,7 +11,17 @@ android_app {
     privileged: true,
     srcs: ["src/**/*.java"],
 
+    required: [
+        "pocketmode_whitelist.xml",
+    ],
+
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+}
+
+prebuilt_etc {
+    name: "pocketmode_whitelist.xml",
+    src: "pocketmode_whitelist.xml",
+    sub_dir: "sysconfig",
 }
