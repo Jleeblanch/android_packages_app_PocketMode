@@ -1,0 +1,26 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "PocketMode",
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    srcs: ["src/**/*.java"],
+
+    static_libs: [
+        "android-support-v4",
+        "android-support-v7-appcompat",
+        "android-support-v7-preference",
+        "android-support-v7-recyclerview",
+        "android-support-v14-preference",
+        "org.lineageos.platform.internal",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
