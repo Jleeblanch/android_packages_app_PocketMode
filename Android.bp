@@ -8,8 +8,8 @@ android_app {
     name: "PocketMode",
     certificate: "platform",
     platform_apis: true,
-    privileged: true,
     srcs: ["src/**/*.java"],
+    system_ext_specific: true,
 
     required: [
         "pocketmode_whitelist.xml",
@@ -24,4 +24,5 @@ prebuilt_etc {
     name: "pocketmode_whitelist.xml",
     src: "pocketmode_whitelist.xml",
     sub_dir: "sysconfig",
+    system_ext_specific: true,
 }
